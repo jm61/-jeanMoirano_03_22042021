@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+        &__logo {
+            max-width: 100%;
+            margin: 2em auto 1em auto;
+        }
+        &__search {
+            border-top: 3px solid #d0d0d0;
+            background-color: $lgrey;
+            padding: 1em 2em 1em 2em;
+            margin: 0;
+                &__icon {
+                    margin-left: 1em;
+                }
+                &__input {
+                    border: none;
+                    background-color: $lgrey;
+                    padding: 0;
+                    font-weight: bold;
+                    font-size: 1.3em;
+                    text-align: center;
+                }       
+            }
+        &__text {
+            background-color: $lblue;
+            &__title {
+                margin: 1.5em 3em 1em 3em;
+            }
+            &__subtitle {
+                margin: 0 2em 1em 2em;
+                color: $dgrey;
+                opacity: .6;
+            }
+            &__btn {
+                margin: 1em 0 3em 0;
+                color: $white;
+                font-weight: bold;
+                font-size: 1.1em;
+                background: rgb(237,115,218);
+                background: linear-gradient(133deg, rgba(237,115,218,1) 0%, rgba(164,91,219,1) 100%); 
+                border-radius: 3em;
+                border: none;
+                padding: 1em;
+                @include box-shadow();
+            }
+        }  
+}

@@ -1,0 +1,33 @@
+// Google Fonts
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Shrikhand&display=swap);
+
+// Variables 
+    $prim: #9356DC;
+    $sec: #FF79DA;
+    $ter: #99E2D0;
+    $lblue: #f6f6f6;
+    $dgrey: #353535;
+    $lgrey: #eaeaea;
+    $white: white;
+    $text: black;
+    $font-cursive: 'Shrikhand', cursive;
+    $font-text: 'Roboto', sans-serif;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body,p,a {
+    margin: 0;
+    padding: 0;
+    color: $text;
+    font-family: $font-text;
+    text-decoration: none;
+    background-color: $white;
+    width: 25em;
+}
+.hidden {
+    display: none;
+} 

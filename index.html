@@ -1,72 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<!-- Meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='icon' href='data:;base64,iVBORw0KGgo='>
-    <script src="https://kit.fontawesome.com/042eba6f6a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="dist/css/main.min.css">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <script
+      src="https://kit.fontawesome.com/042eba6f6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="dist/css/main.min.css" />
     <title>ohMyFood</title>
-</head>
-<body>
-<!-- Header Section -->
-   <article>
-       <header class="header">
-           <img src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" class="header__logo">
-           <div class="header__search">
-            <i class="fas fa-map-marker-alt fa-xl header__search--icon"></i>
-            <input type="search" name="search" class="header__search--input" placeholder="Paris, Belleville" size="10">
-           </div>
-           <div class="header__text">
-            <h1 class="header__text--title">Réservez le menu qui vous convient</h1>
-            <h3 class="header__text--subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
-            <button type="submit" class="header__text--btn">Explorer nos restaurants</button>
-           </div>
-       </header>
-   </article>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <article>
+      <header class="header">
+        <img
+          src="images/logo/ohmyfood@2x.svg"
+          alt="logo ohmyfood"
+          class="header__logo"
+        />
+        <div class="header__search">
+          <i class="fas fa-map-marker-alt fa-xl header__search__icon"></i>
+          <input
+            type="search"
+            name="search"
+            class="header__search__input"
+            placeholder="Paris, Belleville"
+            size="10"
+          />
+        </div>
+        <div class="header__text">
+          <h1 class="header__text__title">
+            Réservez le menu qui vous convient
+          </h1>
+          <h3 class="header__text__subtitle">
+            Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </h3>
+          <button type="submit" class="header__text__btn">
+            Explorer nos restaurants
+          </button>
+        </div>
+      </header>
+    </article>
 
-<!-- How To Section -->
-<section class="howto">
-    <h1 class="howto__title">Fonctionnement</h1>
-    <div class="howto__step">
-        <i class="howto__step--step">1</i>
-        <i class="fas fa-mobile-alt fa-2x howto__step--fa"></i>
-        <h3 class="howto__step--text">Choisissez un restaurant</h3>
-    </div>
-    <div class="howto__step">
-        <i class="howto__step--step">2</i>
-        <i class="fas fa-list-ul fa-2x howto__step--fa"></i>
-        <h3 class="howto__step--text">Composez votre menu</h3>
-    </div>
-    <div class="howto__step">
-        <i class="howto__step--step">3</i>
-        <i class="fas fa-store fa-2x howto__step--fa"></i>
-        <h3 class="howto__step--text">Dégustez au restaurant</h3>
-    </div>
-</section>
+    <!-- How To Section -->
+    <section class="howto">
+      <h1 class="howto__title">Fonctionnement</h1>
+      <div class="howto__step">
+        <i class="howto__step__step">1</i>
+        <i class="fas fa-mobile-alt fa-2x howto__step__fa"></i>
+        <h3 class="howto__step__text">Choisissez un restaurant</h3>
+      </div>
+      <div class="howto__step">
+        <i class="howto__step__step">2</i>
+        <i class="fas fa-list-ul fa-2x howto__step__fa"></i>
+        <h3 class="howto__step__text">Composez votre menu</h3>
+      </div>
+      <div class="howto__step">
+        <i class="howto__step_step">3</i>
+        <i class="fas fa-store fa-2x howto__step__fa"></i>
+        <h3 class="howto__step__text">Dégustez au restaurant</h3>
+      </div>
+    </section>
 
-<!-- Results Section  -->
-<section>
-    <img src="images/restaurants/jay-small.jpg" alt="">
-    <img src="images/restaurants/louis-small.jpg" alt="">
-    <img src="images/restaurants/stil-small.jpg" alt="">
-    <img src="images/restaurants/toa-small.jpg" alt="">
-</section>
+    <!-- List Section  -->
+    <section>
+      <div class="list">
+        <h1 class="list__title">Restaurants</h1>
+        <div class="list__card">
+          <img src="images/restaurants/jay-small.jpg" alt="" />
+          <h3 class="list__card_title">La palette du goût</h3>
+          <i class="far fa-heart fa-2x"></i>
+          <p class="list__card__loc">Ménimontant</p>
+        </div>
+        <div class="list__card">
+          <img src="images/restaurants/stil-small.jpg" alt="" />
+          <h3 class="list__card_title">La note enchantée</h3>
+          <i class="fas fa-heart fa-2x"></i>
 
-<!-- Footer Section -->
-<a href="https://git.io/JOPgr">Github Page</a>
-    
+          <p class="list__card__loc">Charonne</p>
+        </div>
+        <div class="list__card">
+          <img src="images/restaurants/toa-small.jpg" alt="" />
+          <h3 class="list__card_title">À la française</h3>
+          <p class="list__card__loc">Cité Rouge</p>
+        </div>
+        <div class="list__card">
+          <img src="images/restaurants/louis-small.jpg" alt="" />
+          <h3 class="list__card_title">Le délice des sens</h3>
+          <p class="list__card__loc">Folie-Méricourt</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <img
+        src="images/logo/ohmyfood.png"
+        alt="logo ohmyfood "
+        class="footer__logo"
+      />
+
+      <div class="footer__content">
+        <i class="fas fa-utensils"></i>
+        <h3 class="footer_content__text">Proposer un restaurant</h3>
+      </div>
+      <div class="footer__content">
+        <i class="fas fa-hands-helping"></i>
+        <h3 class="footer_content__text">Devenir partenaire</h3>
+      </div>
+      <div class="footer__content">
+        <h4 class="footer__content_sub">Mentions légales</h4>
+      </div>
+      <div class="footer__content">
+        <h4 class="footer__content_sub">Contact</h4>
+      </div>
+    </footer>
+
     <div class="hidden">
-        
-    <i class="fas fa-list-ul fa-2x"></i>
-    <i class="fas fa-store fa-2x --"></i>
-    <i class="fas fa-heart fa-2x"></i>
-    <i class="far fa-heart fa-2x"></i>
-    <i class="fas fa-utensils fa-2x"></i>
-    <i class="fas fa-hands-helping fa-2x"></i>
-    <i class="fas fa-check-circle fa-2x"></i>
+      <i class="fas fa-list-ul fa-2x"></i>
+      <i class="fas fa-store fa-2x --"></i>
+      <i class="fas fa-heart fa-2x"></i>
+      <i class="far fa-heart fa-2x"></i>
+      <i class="fas fa-utensils fa-2x"></i>
+      <i class="fas fa-check-circle fa-2x"></i>
     </div>
-</body>
+  </body>
 </html>
