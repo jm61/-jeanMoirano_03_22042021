@@ -14,7 +14,6 @@ body, p, a {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   background-color: white;
-  width: 25em;
 }
 
 .hidden {
@@ -107,7 +106,7 @@ body, p, a {
   background-color: #f6f6f6;
   border-radius: 1.2em;
   margin: 1em 1.3em .5em 2em;
-  padding: .8em;
+  padding: .5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -128,21 +127,79 @@ body, p, a {
   font-weight: bold;
   padding: .50em .75em;
   border-radius: 50%;
-  margin-left: -1.7em;
+  margin-left: -1.5em;
 }
 
 .howto__step__fa {
   margin-left: 1em;
+  color: #353535;
+}
+
+.howto__step__fap {
+  margin-left: 1em;
+  color: #9356DC;
 }
 
 .howto__step__text {
-  margin-left: 2em;
+  margin-left: 1.5em;
+}
+
+.list {
+  max-width: 100%;
+  background-color: #f6f6f6;
+  margin: 3.5em 0;
+}
+
+.list__title {
+  padding: 3rem 0 1rem 1rem;
+}
+
+.list__card {
+  background-color: white;
+  margin: 1.1em;
+  border-radius: 2em;
+  max-height: 10%;
+  -webkit-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+.list__card__img {
+  max-width: 100%;
+  border-radius: 2em 2em 0 0;
+}
+
+.list__card__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1em;
+}
+
+.list__card__caption__text {
+  margin: 0 0 0 1em;
+  line-height: .5;
+}
+
+.list__card__caption__heart {
+  margin-left: auto;
+  color: #9356DC;
+  margin-right: 1.5em;
+}
+
+@media screen and (max-width: 400px) {
+  .list {
+    width: 400px;
+  }
 }
 
 .footer {
   background-color: #353535;
   color: white;
   margin: 0;
+  padding-bottom: 2em;
   line-height: 1;
 }
 

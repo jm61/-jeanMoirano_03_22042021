@@ -11,7 +11,7 @@
             background-color: $lblue;
             border-radius: 1.2em;
             margin: 1em 1.3em .5em 2em;
-            padding: .8em;
+            padding: .5em;
             align-items: center;
             justify-content: start;
             flex-direction: row;
@@ -22,13 +22,18 @@
                     font-weight: bold;
                     padding: .50em .75em;
                     border-radius: 50%;
-                    margin-left: -1.7em;
+                    margin-left: -1.5em;
                 }
                 &__fa {
-                    margin-left: 1em;  
+                    margin-left: 1em;
+                    color: $dgrey; 
+                }
+                &__fap {
+                    margin-left: 1em;
+                    color: $prim; 
                 }
                 &__text {
-                    margin-left: 2em;
+                    margin-left: 1.5em;
                 }
         }
 }

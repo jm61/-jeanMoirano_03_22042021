@@ -1,0 +1,39 @@
+.list {
+    max-width: 100%;
+    background-color: $lblue;
+    margin: 3.5em 0;
+    &__title {
+        padding: 3rem 0 1rem 1rem  ;
+    }
+    &__card {
+        background-color: $white;
+        margin: 1.1em;
+        border-radius: 2em;
+        max-height: 10%;
+        @include box-shadow;
+        &__img {
+           max-width: 100%;
+            border-radius: 2em 2em 0 0;
+        }
+        &__caption {
+            display: flex;
+            align-items: center;
+            padding-bottom: 1em;
+            &__text {
+                margin: 0 0 0 1em ;
+                line-height: .5;
+            }
+            &__heart {
+                margin-left: auto;
+                color: $prim;
+                margin-right: 1.5em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .list {
+        width: 400px;
+    }
+}
