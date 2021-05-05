@@ -8,11 +8,13 @@
     $ter: #99E2D0;
     $lblue: #f6f6f6;
     $dgrey: #353535;
-    $lgrey: #eaeaea;
+    $lgrey: #7b7b7b;
+    $nouveau: #379c85;
     $white: white;
     $text: black;
     $font-cursive: 'Shrikhand', cursive;
     $font-text: 'Roboto', sans-serif;
+    $heart-anim: 800;
 
 *,
 *::before,
@@ -27,6 +29,4 @@ body,p,a {
     text-decoration: none;
     background-color: $white;
 }
-.hidden {
-    display: none;
-} 
+ 

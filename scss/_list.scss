@@ -6,14 +6,25 @@
         padding: 3rem 0 1rem 1rem  ;
     }
     &__card {
+        position: relative;
         background-color: $white;
         margin: 1.1em;
         border-radius: 2em;
-        max-height: 10%;
         @include box-shadow;
         &__img {
            max-width: 100%;
             border-radius: 2em 2em 0 0;
+            object-fit: none;
+        }
+        &__nouveau {
+            background: $ter;
+            color: $nouveau;
+            position: absolute;
+            top: 3%;
+            left: 75%;
+            font-size: small;
+            font-weight: bold;            
+            padding: 5px 8px;
         }
         &__caption {
             display: flex;
@@ -31,9 +42,22 @@
         }
     }
 }
-
-@media screen and (max-width: 400px) {
-    .list {
-        width: 400px;
-    }
+i.anim:hover {
+    background: linear-gradient(#FF79DA, #99E2D0);
+    padding-top: .1em;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: all 1s ease-in;
+    //transition-delay: .3s;
+    font-weight: $heart-anim;
 }
+
+/* @media screen and (min-width: 417px) {
+    .list {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+        height: auto;
+    }
+} */

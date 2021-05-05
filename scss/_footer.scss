@@ -18,5 +18,13 @@
     &__content i {
         margin-right: 1em;
     }
-
+    &__content a {
+        background-color: inherit;
+        color: inherit;
+    }
+}
+@media screen and(min-width: 417px) {
+    .footer__logo {
+        width: 15%;
+    }
 }

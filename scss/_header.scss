@@ -44,6 +44,10 @@
                 border: none;
                 padding: 1em;
                 @include box-shadow();
+                &:hover {
+                    opacity: .8;
+                    @include box-shadow2;
+                }
             }
         }  
 }

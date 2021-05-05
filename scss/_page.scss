@@ -1,0 +1,110 @@
+.page__header {
+    display: flex;
+    padding: 1.3rem 0 .8rem 0;
+    align-items: center;
+    justify-content: center;
+    &__icon {
+        margin-right: 4rem;
+    }
+    &__logo {
+        margin-right: 4rem;
+    }
+    &__palette {
+        @include bg-img("../../images/restaurants/jay-small.jpg")
+    }
+    &__note {
+        @include bg-img("../../images/restaurants/stil-small.jpg")
+    }
+    &__france {
+        @include bg-img("../../images/restaurants/toa-small.jpg")
+    }
+    &__delice {
+        @include bg-img("../../images/restaurants/louis-small.jpg")   
+    }
+}
+
+.restaurant{
+    background: $lblue;
+    margin: -3rem 0 0 0;
+    padding-bottom: 20px;
+    border-radius: 2em 2em 0 0;
+    &__name {
+        display: flex;
+        font-family: $font-cursive;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0 0 15px;
+    }
+    &__icon {
+        margin-right: 2em;
+        color: $lgrey;
+    }
+}
+.wrapper {
+    &__title {
+        font-weight: bold;
+        color: $lgrey;
+        background: $lblue;
+        padding: 1.3rem 0 3px 1rem;
+    }
+    hr{
+        border: $ter solid 2px;
+        width: 3em;
+        margin: .3em 0 0 1em;
+    }
+    &__recipe{
+        background-color: $white;
+        border-radius: 1rem;
+        width: 100%;
+        margin: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: .9;
+        &__details {
+            margin: .6em;
+            color: $lgrey;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+.wrapper__recipe h3 {
+    margin: .6em;
+}
+    
+    &__meal{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        border-radius: 0 15px 15px 0;
+        margin: 15px 0 0 0;
+        padding: 0 0 26px 0;
+        height: 38px;
+        background-color: white;
+        &__fee {
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0 0 0 0;
+            padding: 36px 15px 0 8px; 
+        }  
+    }
+}
+
+.order-btn {
+    margin: 2em auto;
+    color: $white;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 50vw;
+    background: rgb(237,115,218);
+    background: linear-gradient(133deg, rgba(237,115,218,1) 0%, rgba(164,91,219,1) 100%); 
+    border-radius: 3em;
+    border: none;
+    padding: 1em;
+    @include box-shadow();
+    text-align: center;
+    &:hover {
+        opacity: .8;
+        @include box-shadow2;
+    }
+}

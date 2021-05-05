@@ -16,6 +16,10 @@
             justify-content: start;
             flex-direction: row;
             @include box-shadow();
+            &:hover {
+                opacity: .8;
+                @include box-shadow2;
+            }
                 &__step {
                     background-color: $prim;
                     color: $white;
@@ -36,4 +40,14 @@
                     margin-left: 1.5em;
                 }
         }
+}
+@media screen and(min-width: 417px) {
+    .howto {
+        flex-flow: row nowrap;
+        &__step {
+            justify-content: center;
+            max-width: 50vw;
+        }
+    }
+    
 }

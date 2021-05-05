@@ -16,10 +16,6 @@ body, p, a {
   background-color: white;
 }
 
-.hidden {
-  display: none;
-}
-
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,7 +34,7 @@ body, p, a {
 
 .header__search {
   border-top: 3px solid #d0d0d0;
-  background-color: #eaeaea;
+  background-color: #7b7b7b;
   padding: 1em 2em 1em 2em;
   margin: 0;
 }
@@ -49,7 +45,7 @@ body, p, a {
 
 .header__search__input {
   border: none;
-  background-color: #eaeaea;
+  background-color: #7b7b7b;
   padding: 0;
   font-weight: bold;
   font-size: 1.3em;
@@ -82,6 +78,12 @@ body, p, a {
   padding: 1em;
   -webkit-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+.header__text__btn:hover {
+  opacity: .8;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
 .howto {
@@ -121,6 +123,12 @@ body, p, a {
           box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
 }
 
+.howto__step:hover {
+  opacity: .8;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
 .howto__step__step {
   background-color: #9356DC;
   color: white;
@@ -144,6 +152,21 @@ body, p, a {
   margin-left: 1.5em;
 }
 
+@media screen and (min-width: 417px) {
+  .howto {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .howto__step {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 50vw;
+  }
+}
+
 .list {
   max-width: 100%;
   background-color: #f6f6f6;
@@ -155,10 +178,10 @@ body, p, a {
 }
 
 .list__card {
+  position: relative;
   background-color: white;
   margin: 1.1em;
   border-radius: 2em;
-  max-height: 10%;
   -webkit-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
 }
@@ -166,6 +189,19 @@ body, p, a {
 .list__card__img {
   max-width: 100%;
   border-radius: 2em 2em 0 0;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.list__card__nouveau {
+  background: #99E2D0;
+  color: #379c85;
+  position: absolute;
+  top: 3%;
+  left: 75%;
+  font-size: small;
+  font-weight: bold;
+  padding: 5px 8px;
 }
 
 .list__card__caption {
@@ -189,12 +225,26 @@ body, p, a {
   margin-right: 1.5em;
 }
 
-@media screen and (max-width: 400px) {
-  .list {
-    width: 400px;
-  }
+i.anim:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#99E2D0));
+  background: linear-gradient(#FF79DA, #99E2D0);
+  padding-top: .1em;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  font-weight: 800;
 }
 
+/* @media screen and (min-width: 417px) {
+    .list {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+        height: auto;
+    }
+} */
 .footer {
   background-color: #353535;
   color: white;
@@ -223,5 +273,176 @@ body, p, a {
 
 .footer__content i {
   margin-right: 1em;
+}
+
+.footer__content a {
+  background-color: inherit;
+  color: inherit;
+}
+
+@media screen and (min-width: 417px) {
+  .footer__logo {
+    width: 15%;
+  }
+}
+
+.page__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.3rem 0 .8rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page__header__icon {
+  margin-right: 4rem;
+}
+
+.page__header__logo {
+  margin-right: 4rem;
+}
+
+.page__header__palette {
+  background-image: url("../../images/restaurants/jay-small.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 222px;
+}
+
+.page__header__note {
+  background-image: url("../../images/restaurants/stil-small.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 222px;
+}
+
+.page__header__france {
+  background-image: url("../../images/restaurants/toa-small.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 222px;
+}
+
+.page__header__delice {
+  background-image: url("../../images/restaurants/louis-small.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 222px;
+}
+
+.restaurant {
+  background: #f6f6f6;
+  margin: -3rem 0 0 0;
+  padding-bottom: 20px;
+  border-radius: 2em 2em 0 0;
+}
+
+.restaurant__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0 0 15px;
+}
+
+.restaurant__icon {
+  margin-right: 2em;
+  color: #7b7b7b;
+}
+
+.wrapper__title {
+  font-weight: bold;
+  color: #7b7b7b;
+  background: #f6f6f6;
+  padding: 1.3rem 0 3px 1rem;
+}
+
+.wrapper hr {
+  border: #99E2D0 solid 2px;
+  width: 3em;
+  margin: .3em 0 0 1em;
+}
+
+.wrapper__recipe {
+  background-color: white;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: .9;
+}
+
+.wrapper__recipe__details {
+  margin: .6em;
+  color: #7b7b7b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wrapper .wrapper__recipe h3 {
+  margin: .6em;
+}
+
+.wrapper__meal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0 15px 15px 0;
+  margin: 15px 0 0 0;
+  padding: 0 0 26px 0;
+  height: 38px;
+  background-color: white;
+}
+
+.wrapper__meal__fee {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 0 0;
+  padding: 36px 15px 0 8px;
+}
+
+.order-btn {
+  margin: 2em auto;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  width: 50vw;
+  background: #ed73da;
+  background: linear-gradient(133deg, #ed73da 0%, #a45bdb 100%);
+  border-radius: 3em;
+  border: none;
+  padding: 1em;
+  -webkit-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.order-btn:hover {
+  opacity: .8;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=main.css.map */
