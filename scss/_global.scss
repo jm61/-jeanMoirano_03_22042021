@@ -21,12 +21,15 @@
 *::after {
     box-sizing: border-box;
 }
-body,p,a {
+body,p {
     margin: 0;
     padding: 0;
     color: $text;
     font-family: $font-text;
-    text-decoration: none;
     background-color: $white;
+}
+a{
+    text-decoration: none;
+    color: $text;
 }
  

@@ -42,16 +42,6 @@
         }
     }
 }
-i.anim:hover {
-    background: linear-gradient(#FF79DA, #99E2D0);
-    padding-top: .1em;
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    transition: all 1s ease-in;
-    //transition-delay: .3s;
-    font-weight: $heart-anim;
-}
 
 /* @media screen and (min-width: 417px) {
     .list {

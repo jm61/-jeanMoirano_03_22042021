@@ -1,0 +1,26 @@
+// heart icon fill up
+i.anim:hover {
+    background: linear-gradient($sec, $ter);
+    padding-top: .1em;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: all 1s ease-in;
+    font-weight: $heart-anim;
+}
+// fade in menu
+.animA{
+    animation: fadein 1s ease-in;
+    animation-delay: 0.1s;  
+}
+@keyframes fadein{
+    0%{
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

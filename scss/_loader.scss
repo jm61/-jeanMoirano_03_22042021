@@ -1,0 +1,79 @@
+.loader {
+    position: absolute;
+    background-color: $prim;
+    opacity: .7;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: rgb(48, 46, 46);
+    animation: disparition 8s linear;
+    animation-fill-mode: forwards;
+}
+.spinner {
+    margin: 16rem 0;
+    width: 7rem;
+    height: 7rem;
+    display: inline-block;
+    border: 7px dotted rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: $ter;
+    border-bottom-color:  $sec;
+    margin-bottom: 5rem;
+    animation: 1s spin infinite ease-in-out;
+}
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+.dots > div {
+    width: 3rem;
+    height: 3rem;
+    background-color: #333;
+    border-radius: 50%;
+    display: inline-block;
+    animation: 4s bounce infinite ease-in-out both ;
+    color: gold;
+    font-weight: 700;
+}
+.dots .bounce {
+    animation-delay: -.30s;   
+}
+.dots .bounce2 {
+    animation-delay: -.15s;   
+}
+.bounce {
+    padding-top: 1rem;
+    margin: -.75rem;
+}
+.bounce2 {
+    padding-top: 1rem;
+    margin: -.75rem;
+}
+.bounce3 {
+    padding-top: 1rem;
+    margin: -.75rem;
+}
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);;
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+@keyframes disparition{
+    0%{
+        opacity: 1;
+    }
+
+    30%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}

@@ -26,14 +26,14 @@
 .restaurant{
     background: $lblue;
     margin: -3rem 0 0 0;
-    padding-bottom: 20px;
+    padding-bottom: 1.3em;
     border-radius: 2em 2em 0 0;
     &__name {
         display: flex;
         font-family: $font-cursive;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 0 0 15px;
+        padding: 1.25em 0 0 1.25em;
     }
     &__icon {
         margin-right: 2em;
@@ -52,27 +52,26 @@
         width: 3em;
         margin: .3em 0 0 1em;
     }
+}
+.plat{
+    display: flex;
     &__recipe{
-        background-color: $white;
-        border-radius: 1rem;
-        width: 100%;
-        margin: 1em;
+        background-color: white;
+        border-radius: 15px 0 0 15px;
+        width: 96%;
+        margin: 15px 0 0 6px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        line-height: .9;
-        &__details {
-            margin: .6em;
-            color: $lgrey;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
     }
-.wrapper__recipe h3 {
-    margin: .6em;
-}
-    
-    &__meal{
+    &__ingredients{
+        font-size: 13px;
+        margin: 0 0 0 0;
+        padding: 5px 0 12px 7px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__right{
         display: flex;
         align-items: baseline;
         justify-content: space-between;
@@ -81,15 +80,32 @@
         padding: 0 0 26px 0;
         height: 38px;
         background-color: white;
-        &__fee {
+        &__price{
             font-size: 13px;
             font-weight: 600;
             margin: 0 0 0 0;
-            padding: 36px 15px 0 8px; 
-        }  
+            padding: 36px 15px 0 8px;
+        }
     }
+    &__check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $ter;
+        overflow: hidden;
+        margin: 15px 0 0 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 0%;
+        &.fas{
+            color: white;
+        }
+    }
+    
 }
-
+.wrapper__recipe h3 {
+    margin: .6em;
+    }
 .order-btn {
     margin: 2em auto;
     color: $white;
@@ -107,4 +123,7 @@
         opacity: .8;
         @include box-shadow2;
     }
+}
+.footer__logo {
+    width: 25%;
 }

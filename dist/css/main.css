@@ -7,13 +7,189 @@
           box-sizing: border-box;
 }
 
-body, p, a {
+body, p {
   margin: 0;
   padding: 0;
   color: black;
   font-family: "Roboto", sans-serif;
-  text-decoration: none;
   background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.loader {
+  position: absolute;
+  background-color: #9356DC;
+  opacity: .7;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: #302e2e;
+  -webkit-animation: disparition 8s linear;
+          animation: disparition 8s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.spinner {
+  margin: 16rem 0;
+  width: 7rem;
+  height: 7rem;
+  display: inline-block;
+  border: 7px dotted rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #99E2D0;
+  border-bottom-color: #FF79DA;
+  margin-bottom: 5rem;
+  -webkit-animation: 1s spin infinite ease-in-out;
+          animation: 1s spin infinite ease-in-out;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+.dots > div {
+  width: 3rem;
+  height: 3rem;
+  background-color: #333;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation: 4s bounce infinite ease-in-out both;
+          animation: 4s bounce infinite ease-in-out both;
+  color: gold;
+  font-weight: 700;
+}
+
+.dots .bounce {
+  -webkit-animation-delay: -.30s;
+          animation-delay: -.30s;
+}
+
+.dots .bounce2 {
+  -webkit-animation-delay: -.15s;
+          animation-delay: -.15s;
+}
+
+.bounce {
+  padding-top: 1rem;
+  margin: -.75rem;
+}
+
+.bounce2 {
+  padding-top: 1rem;
+  margin: -.75rem;
+}
+
+.bounce3 {
+  padding-top: 1rem;
+  margin: -.75rem;
+}
+
+@-webkit-keyframes bounce {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+i.anim:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#99E2D0));
+  background: linear-gradient(#FF79DA, #99E2D0);
+  padding-top: .1em;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  font-weight: 800;
+}
+
+.animA {
+  -webkit-animation: fadein 1s ease-in;
+          animation: fadein 1s ease-in;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .header {
@@ -225,18 +401,6 @@ body, p, a {
   margin-right: 1.5em;
 }
 
-i.anim:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#99E2D0));
-  background: linear-gradient(#FF79DA, #99E2D0);
-  padding-top: .1em;
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-transition: all 1s ease-in;
-  transition: all 1s ease-in;
-  font-weight: 800;
-}
-
 /* @media screen and (min-width: 417px) {
     .list {
         margin-left: auto;
@@ -342,7 +506,7 @@ i.anim:hover {
 .restaurant {
   background: #f6f6f6;
   margin: -3rem 0 0 0;
-  padding-bottom: 20px;
+  padding-bottom: 1.3em;
   border-radius: 2em 2em 0 0;
 }
 
@@ -357,7 +521,7 @@ i.anim:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 0 0 15px;
+  padding: 1.25em 0 0 1.25em;
 }
 
 .restaurant__icon {
@@ -378,29 +542,31 @@ i.anim:hover {
   margin: .3em 0 0 1em;
 }
 
-.wrapper__recipe {
+.plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.plat__recipe {
   background-color: white;
-  border-radius: 1rem;
-  width: 100%;
-  margin: 1em;
+  border-radius: 15px 0 0 15px;
+  width: 96%;
+  margin: 15px 0 0 6px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: .9;
 }
 
-.wrapper__recipe__details {
-  margin: .6em;
-  color: #7b7b7b;
+.plat__ingredients {
+  font-size: 13px;
+  margin: 0 0 0 0;
+  padding: 5px 0 12px 7px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.wrapper .wrapper__recipe h3 {
-  margin: .6em;
-}
-
-.wrapper__meal {
+.plat__right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,11 +583,37 @@ i.anim:hover {
   background-color: white;
 }
 
-.wrapper__meal__fee {
+.plat__right__price {
   font-size: 13px;
   font-weight: 600;
   margin: 0 0 0 0;
   padding: 36px 15px 0 8px;
+}
+
+.plat__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #99E2D0;
+  overflow: hidden;
+  margin: 15px 0 0 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 0%;
+}
+
+.plat__check.fas {
+  color: white;
+}
+
+.wrapper__recipe h3 {
+  margin: .6em;
 }
 
 .order-btn {
@@ -444,5 +636,9 @@ i.anim:hover {
   opacity: .8;
   -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer__logo {
+  width: 25%;
 }
 /*# sourceMappingURL=main.css.map */
