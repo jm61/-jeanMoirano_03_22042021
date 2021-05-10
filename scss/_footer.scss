@@ -23,8 +23,17 @@
         color: inherit;
     }
 }
-@media screen and(min-width: 417px) {
-    .footer__logo {
-        width: 15%;
+@media screen and(min-width: 618px) {
+    .footer{
+        font-size: .9rem;
+        justify-content: space-around;
+        &__logo {
+            width: 30%;
+            margin-left: 35%;
+        }
+        &__desktop{
+            display: flex;
+            justify-content: space-evenly;
+        }
     }
 }

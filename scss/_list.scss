@@ -12,9 +12,9 @@
         border-radius: 2em;
         @include box-shadow;
         &__img {
-           max-width: 100%;
+           width: 100%;
             border-radius: 2em 2em 0 0;
-            object-fit: none;
+            object-fit:contain;
         }
         &__nouveau {
             background: $ter;
@@ -43,11 +43,10 @@
     }
 }
 
-/* @media screen and (min-width: 417px) {
+@media screen and (min-width: 618px) {
     .list {
-        margin-left: auto;
-        margin-right: auto;
-        width: 50vw;
-        height: auto;
+       display: flex; 
+       flex-wrap: wrap;
+       justify-content: center;
     }
-} */
+} 
