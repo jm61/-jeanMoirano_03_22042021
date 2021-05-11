@@ -44,6 +44,7 @@
 @media screen and (min-width: 400px) {
     .howto {
         flex-flow: row wrap;
+        justify-content: space-around;
         &__step {
             justify-content: center;
             max-width: 70vw;

@@ -24,3 +24,19 @@ i.anim:hover {
         opacity: 1;
     }
 }
+// Animation slide and check turn //
+.plat .plat__check{
+    width: 0;
+    transition: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.plat:hover .plat__check{
+    width: 5em;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.plat:hover .plat__right{
+    border-radius: 0;
+}

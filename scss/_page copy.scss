@@ -22,6 +22,7 @@
         @include bg-img("../../images/restaurants/delice-small.jpg")   
     }
 }
+
 .restaurant{
     background: $lblue;
     margin: -3rem 0 0 0;
@@ -56,37 +57,39 @@
 }
 .plat{
     display: flex;
-    line-height: .3;
-    margin: 1em 1em;
-    border-radius: 1em;
-    @include box-shadow;
-    &__name{
-        background-color: white;
-        border-radius: 1em 0 0 1em;
-        width: 87%;
+    margin: 1em;
+    background-color: rgb(223, 182, 182);
+    &__recipe{
+    border-radius: 1em 0 0 1em;
+
+        background-color: transparent;
+        //border-radius: 1em 0 0 0;
+        width: 96%;
+    }
+    &__ingredients{
+        font-size: 13px;
+        background-color: #777;
         margin: 0 0 0 0;
+        padding: 5px 0 12px 7px;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
     }
-    &__detail{
-        padding: 5px 0 1em .5em;
-        overflow: hidden;
-        color: $dgrey;
-        opacity: .6;
-        text-overflow: ellipsis;
-    }
-    & h3 { padding-left: .5em;}
     &__right{
+        background-color:khaki;
         display: flex;
         align-items: flex-end;
-        border-radius: 0 1em 1em 0;
+        //justify-content: space-between;
+        border-radius: 0 15px 15px 0;
+        margin: 15px 0 0 0;
+        padding: 0 0 26px 0;
+        height: 38px;
         background-color: white;
-    }
-    &__right__prix{
-        font-weight: bold;
-        padding: .6em;
-        margin-bottom: .5em;
+        &__price{
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0 0 0 0;
+            padding: 36px 15px 0 8px;
+        }
     }
     &__check{
         display: flex;
@@ -94,14 +97,15 @@
         align-items: center;
         background: $ter;
         overflow: hidden;
-        border-radius: 0 1em 1em 0;
+        margin: 15px 0 0 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
         width: 0%;
-    }
+        &.fas{
+            color: white;
+        }
+    }   
 }
-.fa-check-circle{
-    color: white;
-}
-// -------------------------------- //
 .wrapper__recipe h3 {
     margin: .6em;
     }

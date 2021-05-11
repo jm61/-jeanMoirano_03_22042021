@@ -192,6 +192,26 @@ i.anim:hover {
   }
 }
 
+.plat .plat__check {
+  width: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.plat:hover .plat__check {
+  width: 5em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.plat:hover .plat__right {
+  border-radius: 0;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,6 +280,12 @@ i.anim:hover {
   opacity: .8;
   -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 400px) {
+  .header__logo {
+    width: 40%;
+  }
 }
 
 .howto {
@@ -334,6 +360,8 @@ i.anim:hover {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .howto__step {
     -webkit-box-pack: center;
@@ -494,7 +522,7 @@ i.anim:hover {
 }
 
 .page__header__palette {
-  background-image: url("../../images/restaurants/jay-small.jpg");
+  background-image: url("../../images/restaurants/palette-small.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
@@ -502,7 +530,7 @@ i.anim:hover {
 }
 
 .page__header__note {
-  background-image: url("../../images/restaurants/stil-small.jpg");
+  background-image: url("../../images/restaurants/note-small.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
@@ -510,7 +538,7 @@ i.anim:hover {
 }
 
 .page__header__france {
-  background-image: url("../../images/restaurants/toa-small.jpg");
+  background-image: url("../../images/restaurants/france-small.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
@@ -518,7 +546,7 @@ i.anim:hover {
 }
 
 .page__header__delice {
-  background-image: url("../../images/restaurants/louis-small.jpg");
+  background-image: url("../../images/restaurants/delice-small.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
@@ -547,13 +575,15 @@ i.anim:hover {
 }
 
 .restaurant__icon {
-  margin-right: 2em;
-  color: #eaeaea;
+  margin: auto;
+  color: #353535;
+  opacity: .6;
 }
 
 .wrapper__title {
   font-weight: bold;
-  color: #eaeaea;
+  color: #353535;
+  opacity: .6;
   background: #f6f6f6;
   padding: 1.3rem 0 3px 1rem;
 }
@@ -568,48 +598,50 @@ i.anim:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: .3;
+  margin: 1em 1em;
+  border-radius: 1em;
+  -webkit-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
 }
 
-.plat__recipe {
+.plat__name {
   background-color: white;
-  border-radius: 15px 0 0 15px;
-  width: 96%;
-  margin: 15px 0 0 6px;
+  border-radius: 1em 0 0 1em;
+  width: 87%;
+  margin: 0 0 0 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.plat__ingredients {
-  font-size: 13px;
-  margin: 0 0 0 0;
-  padding: 5px 0 12px 7px;
+.plat__detail {
+  padding: 5px 0 1em .5em;
   overflow: hidden;
+  color: #353535;
+  opacity: .6;
   text-overflow: ellipsis;
+}
+
+.plat h3 {
+  padding-left: .5em;
 }
 
 .plat__right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-radius: 0 15px 15px 0;
-  margin: 15px 0 0 0;
-  padding: 0 0 26px 0;
-  height: 38px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 0 1em 1em 0;
   background-color: white;
 }
 
-.plat__right__price {
-  font-size: 13px;
-  font-weight: 600;
-  margin: 0 0 0 0;
-  padding: 36px 15px 0 8px;
+.plat__right__prix {
+  font-weight: bold;
+  padding: .6em;
+  margin-bottom: .5em;
 }
 
 .plat__check {
@@ -624,13 +656,11 @@ i.anim:hover {
           align-items: center;
   background: #99E2D0;
   overflow: hidden;
-  margin: 15px 0 0 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 0 1em 1em 0;
   width: 0%;
 }
 
-.plat__check.fas {
+.fa-check-circle {
   color: white;
 }
 
