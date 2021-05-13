@@ -67,6 +67,7 @@
         margin: 0 0 0 0;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
     &__detail{
         padding: 5px 0 1em .5em;

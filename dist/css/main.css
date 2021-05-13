@@ -534,6 +534,7 @@ i.anim:hover {
   margin: 0 0 0 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .plat__detail {
   padding: 5px 0 1em 0.5em;
