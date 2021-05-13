@@ -63,11 +63,10 @@
     &__name{
         background-color: white;
         border-radius: 1em 0 0 1em;
-        width: 87%;
+        width: 100%;
         margin: 0 0 0 0;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
     }
     &__detail{
         padding: 5px 0 1em .5em;
@@ -75,6 +74,7 @@
         color: $dgrey;
         opacity: .6;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
     & h3 { padding-left: .5em;}
     &__right{
@@ -85,8 +85,7 @@
     }
     &__right__prix{
         font-weight: bold;
-        padding: .6em;
-        margin-bottom: .5em;
+        margin: 1em;
     }
     &__check{
         display: flex;
@@ -125,4 +124,24 @@
 }
 .footer__logo {
     width: 25%;
+}
+// Responsive //
+@media screen and (min-width: 800px) {
+    .restaurant__name h1{
+        margin: auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .restaurant__name h1{
+        margin: auto;
+    }
+    .desktop{
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+    }
+    .container-desktop{
+        display: flex;
+        justify-content: space-evenly;
+    }
 }

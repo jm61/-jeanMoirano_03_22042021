@@ -13,6 +13,14 @@ i.anim:hover {
     animation: fadein 1s ease-in;
     animation-delay: 0.1s;  
 }
+.animB{
+    animation: fadein 1.2s ease-in;
+    animation-delay: 0.3s;  
+}
+.animC{
+    animation: fadein 1.4s ease-in;
+    animation-delay: 0.5s;  
+}
 @keyframes fadein{
     0%{
         transform: translateY(1rem);
@@ -27,16 +35,39 @@ i.anim:hover {
 // Animation slide and check turn //
 .plat .plat__check{
     width: 0;
-    transition: 0.3s;
-    transition-timing-function: ease-out;
+    transition: .8s ease-out;
 }
-
 .plat:hover .plat__check{
     width: 5em;
-    transition: 0.3s;
-    transition-timing-function: ease-in-out;
+    transition: 0.5s ease-in;
 }
-
+@media screen and (min-width: 1200px){
+    .plat:hover .plat__check{
+        width: 2.5em;
+        margin-left: -2.1em;
+        opacity: .6;
+        transition: 0.5s ease-in;
+        align-items: inherit;
+        padding-top: .3em;
+    }
+}
 .plat:hover .plat__right{
     border-radius: 0;
+    @media screen and (min-width: 1200px){
+       border-radius: 0 1em 1em 0; 
+    }
+
 }
+// Animation rotate check //
+.plat:hover .check-anim{
+    animation: rotate .8s ease-in; 
+ }
+ @keyframes rotate {
+     from {
+         transform: rotate(0);
+     }
+     to {
+         transform: rotate(-1turn);
+     }
+ }
+ 
