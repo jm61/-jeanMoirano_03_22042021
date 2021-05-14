@@ -135,6 +135,12 @@
     .restaurant__name h1{
         margin: auto;
     }
+    .order-btn {
+        width: 20vw;
+    }
+    .restaurant__name{
+        width: 50%
+    }
 }
 @media screen and (min-width: 1200px) {
     .restaurant__name h1{
@@ -149,4 +155,8 @@
         display: flex;
         justify-content: space-evenly;
     }
+    .restaurant__name{
+        width: 40%
+    }
+    
 }
