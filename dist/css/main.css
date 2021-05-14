@@ -147,24 +147,24 @@ i.anim:hover {
 }
 
 .animA {
-  -webkit-animation: fadein 1s ease-in;
-          animation: fadein 1s ease-in;
+  -webkit-animation: fadein 0.3s ease-in;
+          animation: fadein 0.3s ease-in;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
 .animB {
-  -webkit-animation: fadein 1.2s ease-in;
-          animation: fadein 1.2s ease-in;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation: fadein 0.5s ease-in;
+          animation: fadein 0.5s ease-in;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .animC {
-  -webkit-animation: fadein 1.4s ease-in;
-          animation: fadein 1.4s ease-in;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation: fadein 0.7s ease-in;
+          animation: fadein 0.7s ease-in;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 @-webkit-keyframes fadein {
@@ -190,7 +190,7 @@ i.anim:hover {
 }
 .plat .plat__check {
   width: 0;
-  transition: 0.8s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .plat:hover .plat__check {
@@ -218,25 +218,25 @@ i.anim:hover {
 }
 
 .plat:hover .check-anim {
-  -webkit-animation: rotate 0.8s ease-in;
-          animation: rotate 0.8s ease-in;
+  -webkit-animation: rotate 0.5s ease-in;
+          animation: rotate 0.5s ease-in;
 }
 
 @-webkit-keyframes rotate {
   from {
-    transform: rotate(0);
+    transform: rotate(90deg);
   }
   to {
-    transform: rotate(-1turn);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes rotate {
   from {
-    transform: rotate(0);
+    transform: rotate(90deg);
   }
   to {
-    transform: rotate(-1turn);
+    transform: rotate(360deg);
   }
 }
 .header {
@@ -245,7 +245,7 @@ i.anim:hover {
   text-align: center;
 }
 .header__logo {
-  max-width: 100%;
+  max-width: 30%;
   margin: 2em auto 1em auto;
 }
 .header__search {
@@ -293,9 +293,9 @@ i.anim:hover {
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (min-width: 400px) {
-  .header__logo {
-    width: 40%;
+@media screen and (min-width: 768px) {
+  .header {
+    width: auto;
   }
 }
 .howto {
@@ -339,28 +339,39 @@ i.anim:hover {
 }
 .howto__step__text {
   margin-left: 1.5em;
+  font-weight: normal;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 768px) {
+  .grid__tablet {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
   .howto {
-    flex-flow: row wrap;
-    justify-content: space-around;
+    width: auto;
   }
-  .howto__step {
-    justify-content: center;
-    max-width: 70vw;
-  }
-  .howto__step__text {
-    margin-left: 0.5em;
-  }
+
+  /* .howto {
+      flex-flow: row wrap;
+      justify-content: space-around;
+      &__step {
+          justify-content: center;
+          max-width: 70vw;
+          &__text{
+              margin-left: .5em;;
+          }
+      }
+  } */
 }
 .list {
   max-width: 100%;
   background-color: #f6f6f6;
-  margin: 3.5em 0;
+  margin: 3.5em 0 0 0;
+  padding-bottom: 2rem;
 }
 .list__title {
-  padding: 3rem 0 1rem 1rem;
+  padding: 3rem 0 0 1rem;
 }
 .list__card {
   position: relative;
@@ -396,15 +407,31 @@ i.anim:hover {
 }
 .list__card__caption__heart {
   margin-left: auto;
-  color: #9356DC;
+  color: #353535;
+  opacity: 0.6;
   margin-right: 1.5em;
 }
 
-@media screen and (min-width: 618px) {
+@media screen and (min-width: 768px) {
   .list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+  }
+
+  .list__title {
+    display: none;
+  }
+
+  .list__card {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .list__card {
+    width: 20%;
   }
 }
 .footer {
@@ -416,7 +443,7 @@ i.anim:hover {
 }
 .footer__logo {
   filter: invert(100%);
-  width: 35%;
+  width: 20%;
   margin: 1.8em 0 1em 1.5em;
 }
 .footer__content {
@@ -425,22 +452,27 @@ i.anim:hover {
   margin: 0 0 0 1.5em;
   height: 2em;
 }
+.footer__content__text {
+  font-weight: normal;
+}
+.footer__content_sub {
+  font-weight: normal;
+}
 .footer__content i {
   margin-right: 1em;
 }
 .footer__content a {
-  background-color: inherit;
   color: inherit;
 }
 
-@media screen and (min-width: 618px) {
+@media screen and (min-width: 768px) {
   .footer {
     font-size: 0.9rem;
     justify-content: space-around;
   }
   .footer__logo {
-    width: 30%;
-    margin-left: 35%;
+    margin-left: 3rem;
+    width: 10%;
   }
   .footer__desktop {
     display: flex;
@@ -458,6 +490,7 @@ i.anim:hover {
 }
 .page__header__logo {
   margin-right: 4rem;
+  width: 30%;
 }
 .page__header__palette {
   background-image: url("../../images/restaurants/palette-small.jpg");
@@ -536,11 +569,15 @@ i.anim:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.plat__name h3 {
+  font-weight: normal;
+}
 .plat__detail {
   padding: 5px 0 1em 0.5em;
   overflow: hidden;
-  color: #353535;
-  opacity: 0.6;
+  color: black;
+  font-weight: lighter;
+  font-size: 0.9rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -592,10 +629,6 @@ i.anim:hover {
 .order-btn:hover {
   opacity: 0.8;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
-}
-
-.footer__logo {
-  width: 25%;
 }
 
 @media screen and (min-width: 800px) {

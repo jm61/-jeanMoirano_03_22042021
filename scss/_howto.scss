@@ -38,11 +38,20 @@
                 }
                 &__text {
                     margin-left: 1.5em;
+                    font-weight: normal;
                 }
         }
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 768px) {
+    .grid__tablet {
+        display: grid;
+        grid-template-columns: auto auto;
+
+    }
     .howto {
+        width: auto;
+    }
+    /* .howto {
         flex-flow: row wrap;
         justify-content: space-around;
         &__step {
@@ -52,6 +61,6 @@
                 margin-left: .5em;;
             }
         }
-    }
+    } */
     
 }

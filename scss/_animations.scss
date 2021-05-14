@@ -10,16 +10,16 @@ i.anim:hover {
 }
 // fade in slide menu
 .animA{
-    animation: fadein 1s ease-in;
+    animation: fadein .3s ease-in;
     animation-delay: 0.1s;  
 }
 .animB{
-    animation: fadein 1.2s ease-in;
-    animation-delay: 0.3s;  
+    animation: fadein .5s ease-in;
+    animation-delay: 0.2s;  
 }
 .animC{
-    animation: fadein 1.4s ease-in;
-    animation-delay: 0.5s;  
+    animation: fadein .7s ease-in;
+    animation-delay: 0.3s;  
 }
 @keyframes fadein{
     0%{
@@ -35,7 +35,7 @@ i.anim:hover {
 // Animation slide and check turn //
 .plat .plat__check{
     width: 0;
-    transition: .8s ease-out;
+    transition: .5s ease-out;
 }
 .plat:hover .plat__check{
     width: 5em;
@@ -60,14 +60,14 @@ i.anim:hover {
 }
 // Animation rotate check //
 .plat:hover .check-anim{
-    animation: rotate .8s ease-in; 
+    animation: rotate .5s ease-in; 
  }
  @keyframes rotate {
      from {
-         transform: rotate(0);
+         transform: rotate(90deg);
      }
      to {
-         transform: rotate(-1turn);
+         transform: rotate(360deg);
      }
  }
  

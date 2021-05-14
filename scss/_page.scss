@@ -8,6 +8,7 @@
     }
     &__logo {
         margin-right: 4rem;
+        width: 30%;
     }
     &__palette {
         @include bg-img("../../images/restaurants/palette-small.jpg")
@@ -68,12 +69,17 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        h3 {
+        font-weight: normal;
+
+        }
     }
     &__detail{
         padding: 5px 0 1em .5em;
         overflow: hidden;
-        color: $dgrey;
-        opacity: .6;
+        color: $text;
+        font-weight: lighter;
+        font-size: .9rem;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
@@ -123,9 +129,7 @@
         @include box-shadow2;
     }
 }
-.footer__logo {
-    width: 25%;
-}
+
 // Responsive //
 @media screen and (min-width: 800px) {
     .restaurant__name h1{

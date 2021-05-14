@@ -6,7 +6,7 @@
     line-height: 1;
     &__logo {
         filter: invert(100%);
-        width: 35%;
+        width: 20%;
         margin: 1.8em 0 1em 1.5em ;
     }
     &__content {
@@ -14,22 +14,27 @@
         align-items: center;
         margin: 0 0 0 1.5em;
         height: 2em;
+        &__text{
+            font-weight: normal;
+        }
+        &_sub{
+            font-weight: normal;
+        }
     }
     &__content i {
         margin-right: 1em;
     }
     &__content a {
-        background-color: inherit;
         color: inherit;
     }
 }
-@media screen and(min-width: 618px) {
+@media screen and(min-width: 768px) {
     .footer{
         font-size: .9rem;
         justify-content: space-around;
         &__logo {
-            width: 30%;
-            margin-left: 35%;
+            margin-left: 3rem;
+            width: 10%;
         }
         &__desktop{
             display: flex;
