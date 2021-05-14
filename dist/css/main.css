@@ -195,7 +195,7 @@ i.anim:hover {
 
 .plat:hover .plat__check {
   width: 5em;
-  transition: 0.5s ease-in;
+  transition: 0.3s ease-in;
 }
 
 @media screen and (min-width: 1200px) {
@@ -218,8 +218,8 @@ i.anim:hover {
 }
 
 .plat:hover .check-anim {
-  -webkit-animation: rotate 0.5s ease-in;
-          animation: rotate 0.5s ease-in;
+  -webkit-animation: rotate 0.3s ease-in;
+          animation: rotate 0.3s ease-in;
 }
 
 @-webkit-keyframes rotate {
@@ -418,7 +418,7 @@ i.anim:hover {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    width: auto;
+    width: 50%;
   }
 
   .list__title {

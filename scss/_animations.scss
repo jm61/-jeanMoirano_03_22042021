@@ -39,7 +39,7 @@ i.anim:hover {
 }
 .plat:hover .plat__check{
     width: 5em;
-    transition: 0.5s ease-in;
+    transition: 0.3s ease-in;
 }
 @media screen and (min-width: 1200px){
     .plat:hover .plat__check{
@@ -60,7 +60,7 @@ i.anim:hover {
 }
 // Animation rotate check //
 .plat:hover .check-anim{
-    animation: rotate .5s ease-in; 
+    animation: rotate .3s ease-in; 
  }
  @keyframes rotate {
      from {
