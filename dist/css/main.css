@@ -348,6 +348,10 @@ i.anim:hover {
     grid-template-columns: auto auto;
   }
 
+  .howto__step {
+    justify-content: center;
+  }
+
   .howto {
     width: auto;
   }
