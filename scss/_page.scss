@@ -71,17 +71,19 @@
         white-space: nowrap;
         h3 {
         font-weight: normal;
-
         }
     }
     &__detail{
         padding: 5px 0 1em .5em;
-        overflow: hidden;
         color: $text;
         font-weight: lighter;
         font-size: .9rem;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        }
     }
     & h3 { padding-left: .5em;}
     &__right{
@@ -132,7 +134,7 @@
 
 // Responsive //
 @media screen and (min-width: 800px) {
-    .restaurant__name h1{
+    .restaurant__name h2{
         margin: auto;
     }
     .order-btn {
@@ -143,8 +145,8 @@
     }
 }
 @media screen and (min-width: 1200px) {
-    .restaurant__name h1{
-        margin: auto;
+    .restaurant__name h2{
+        margin-left: 1em;
     }
     .desktop{
         display: flex;
@@ -153,7 +155,7 @@
     }
     .container-desktop{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     .restaurant__name{
         width: 40%

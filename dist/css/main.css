@@ -201,11 +201,11 @@ i.anim:hover {
 @media screen and (min-width: 1200px) {
   .plat:hover .plat__check {
     width: 2.5em;
-    margin-left: -2.1em;
+    margin-left: -2em;
     opacity: 0.6;
     transition: 0.5s ease-in;
-    align-items: inherit;
-    padding-top: 0.3em;
+    align-items: flex-start;
+    padding-top: 0.5em;
   }
 }
 .plat:hover .plat__right {
@@ -574,10 +574,12 @@ i.anim:hover {
 }
 .plat__detail {
   padding: 5px 0 1em 0.5em;
-  overflow: hidden;
   color: black;
   font-weight: lighter;
   font-size: 0.9rem;
+}
+.plat__detail p {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -632,7 +634,7 @@ i.anim:hover {
 }
 
 @media screen and (min-width: 800px) {
-  .restaurant__name h1 {
+  .restaurant__name h2 {
     margin: auto;
   }
 
@@ -645,8 +647,8 @@ i.anim:hover {
   }
 }
 @media screen and (min-width: 1200px) {
-  .restaurant__name h1 {
-    margin: auto;
+  .restaurant__name h2 {
+    margin-left: 1em;
   }
 
   .desktop {
@@ -657,7 +659,7 @@ i.anim:hover {
 
   .container-desktop {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   .restaurant__name {

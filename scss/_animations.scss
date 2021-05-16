@@ -44,11 +44,11 @@ i.anim:hover {
 @media screen and (min-width: 1200px){
     .plat:hover .plat__check{
         width: 2.5em;
-        margin-left: -2.1em;
+        margin-left: -2em;
         opacity: .6;
         transition: 0.5s ease-in;
-        align-items: inherit;
-        padding-top: .3em;
+        align-items: flex-start;
+        padding-top: .5em;
     }
 }
 .plat:hover .plat__right{
