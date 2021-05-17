@@ -10,16 +10,20 @@ i.anim:hover {
 }
 // fade in slide menu
 .animA{
-    animation: fadein .3s ease-in;
+    animation: fadein .2s ease-in;
     animation-delay: 0.1s;  
 }
 .animB{
-    animation: fadein .5s ease-in;
+    animation: fadein .4s ease-in;
     animation-delay: 0.2s;  
 }
 .animC{
-    animation: fadein .7s ease-in;
+    animation: fadein .6s ease-in;
     animation-delay: 0.3s;  
+}
+.animD{
+    animation: fadein .8s ease-in;
+    animation-delay: 0.4s;  
 }
 @keyframes fadein{
     0%{
