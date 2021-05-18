@@ -588,8 +588,6 @@ i.anim:hover {
   color: black;
   font-weight: lighter;
   font-size: 0.9rem;
-}
-.plat__detail p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

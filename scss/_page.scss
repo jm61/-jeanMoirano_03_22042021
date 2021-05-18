@@ -78,12 +78,9 @@
         color: $text;
         font-weight: lighter;
         font-size: .9rem;
-        p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-
-        }
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     & h3 { padding-left: .5em;}
     &__right{
