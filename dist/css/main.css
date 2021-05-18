@@ -566,7 +566,7 @@ i.anim:hover {
 
 .plat {
   display: flex;
-  line-height: 0.3;
+  line-height: 1;
   margin: 1em 1em;
   border-radius: 1em;
   box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
@@ -582,6 +582,10 @@ i.anim:hover {
 }
 .plat__name h3 {
   font-weight: normal;
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plat__detail {
   padding: 5px 0 1em 0.5em;
@@ -591,9 +595,6 @@ i.anim:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-.plat h3 {
-  padding-left: 0.5em;
 }
 .plat__right {
   display: flex;
