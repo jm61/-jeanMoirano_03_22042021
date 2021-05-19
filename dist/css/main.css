@@ -205,16 +205,16 @@ i.anim:hover {
   transition: 0.3s ease-in;
 }
 
-@media screen and (min-width: 1200px) {
-  .plat:hover .plat__check {
-    width: 2.5em;
-    margin-left: -2em;
-    opacity: 0.6;
-    transition: 0.5s ease-in;
-    align-items: flex-start;
-    padding-top: 0.5em;
-  }
-}
+/* @media screen and (min-width: 1200px){
+    .plat:hover .plat__check{
+        width: 2.5em;
+        margin-left: -2em;
+        opacity: .6;
+        transition: 0.5s ease-in;
+        align-items: flex-start;
+        padding-top: .5em;
+    }
+} */
 .plat:hover .plat__right {
   border-radius: 0;
 }
@@ -664,15 +664,28 @@ i.anim:hover {
   .desktop {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 1em 0;
+    width: 40%;
   }
 
   .container-desktop {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    width: auto;
   }
 
   .restaurant__name {
-    width: 40%;
+    width: 20%;
+    margin: 0 5.5em;
+    justify-content: center;
+  }
+
+  .plat {
+    width: 60%;
+  }
+
+  .page__header__logo {
+    width: 20%;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -45,7 +45,7 @@ i.anim:hover {
     width: 5em;
     transition: 0.3s ease-in;
 }
-@media screen and (min-width: 1200px){
+/* @media screen and (min-width: 1200px){
     .plat:hover .plat__check{
         width: 2.5em;
         margin-left: -2em;
@@ -54,7 +54,7 @@ i.anim:hover {
         align-items: flex-start;
         padding-top: .5em;
     }
-}
+} */
 .plat:hover .plat__right{
     border-radius: 0;
     @media screen and (min-width: 1200px){
