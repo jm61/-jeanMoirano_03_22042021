@@ -27,10 +27,8 @@ a {
   height: 100vh;
   text-align: center;
   color: #302e2e;
-  -webkit-animation: disparition 8s linear;
-          animation: disparition 8s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: disparition 8s linear;
+  animation-fill-mode: forwards;
 }
 
 .spinner {
@@ -43,14 +41,7 @@ a {
   border-top-color: #99E2D0;
   border-bottom-color: #FF79DA;
   margin-bottom: 5rem;
-  -webkit-animation: 1s spin infinite ease-in-out;
-          animation: 1s spin infinite ease-in-out;
-}
-
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(1turn);
-  }
+  animation: 1s spin infinite ease-in-out;
 }
 
 @keyframes spin {
@@ -61,23 +52,20 @@ a {
 .dots > div {
   width: 3rem;
   height: 3rem;
-  background-color: #333;
+  background-color: #353535;
   border-radius: 50%;
   display: inline-block;
-  -webkit-animation: 4s bounce infinite ease-in-out both;
-          animation: 4s bounce infinite ease-in-out both;
+  animation: 4s bounce infinite ease-in-out both;
   color: gold;
   font-weight: 700;
 }
 
 .dots .bounce {
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
+  animation-delay: -0.3s;
 }
 
 .dots .bounce2 {
-  -webkit-animation-delay: -0.15s;
-          animation-delay: -0.15s;
+  animation-delay: -0.15s;
 }
 
 .bounce {
@@ -95,33 +83,12 @@ a {
   margin: -0.75rem;
 }
 
-@-webkit-keyframes bounce {
-  0%, 80%, 100% {
-    transform: scale(0);
-  }
-  40% {
-    transform: scale(1);
-  }
-}
-
 @keyframes bounce {
   0%, 80%, 100% {
     transform: scale(0);
   }
   40% {
     transform: scale(1);
-  }
-}
-@-webkit-keyframes disparition {
-  0% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
   }
 }
 @keyframes disparition {
@@ -141,48 +108,28 @@ i.anim:hover {
   padding-top: 0.1em;
   background-clip: text;
   color: transparent;
-  -webkit-background-clip: text;
   transition: all 1s ease-in;
   font-weight: 800;
 }
 
 .animA {
-  -webkit-animation: fadein 0.2s ease-in;
-          animation: fadein 0.2s ease-in;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  animation: fadein 0.2s ease-in;
+  animation-delay: 0.1s;
 }
 
 .animB {
-  -webkit-animation: fadein 0.4s ease-in;
-          animation: fadein 0.4s ease-in;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation: fadein 0.4s ease-in;
+  animation-delay: 0.2s;
 }
 
 .animC {
-  -webkit-animation: fadein 0.6s ease-in;
-          animation: fadein 0.6s ease-in;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation: fadein 0.6s ease-in;
+  animation-delay: 0.3s;
 }
 
 .animD {
-  -webkit-animation: fadein 0.8s ease-in;
-          animation: fadein 0.8s ease-in;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-@-webkit-keyframes fadein {
-  0% {
-    transform: translateY(1rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  animation: fadein 0.8s ease-in;
+  animation-delay: 0.4s;
 }
 
 @keyframes fadein {
@@ -205,16 +152,6 @@ i.anim:hover {
   transition: 0.3s ease-in;
 }
 
-/* @media screen and (min-width: 1200px){
-    .plat:hover .plat__check{
-        width: 2.5em;
-        margin-left: -2em;
-        opacity: .6;
-        transition: 0.5s ease-in;
-        align-items: flex-start;
-        padding-top: .5em;
-    }
-} */
 .plat:hover .plat__right {
   border-radius: 0;
 }
@@ -225,17 +162,7 @@ i.anim:hover {
 }
 
 .plat:hover .check-anim {
-  -webkit-animation: rotate 0.3s ease-in;
-          animation: rotate 0.3s ease-in;
-}
-
-@-webkit-keyframes rotate {
-  from {
-    transform: rotate(90deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  animation: rotate 0.3s ease-in;
 }
 
 @keyframes rotate {
@@ -394,8 +321,7 @@ i.anim:hover {
 .list__card__img {
   width: 100%;
   border-radius: 2em 2em 0 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .list__card__nouveau {
   background: #99E2D0;
